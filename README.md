@@ -28,7 +28,7 @@ This project demonstrates how to use terraform to create an aws s3 bucket and ho
 3. **Review and apply the configuration:**
    ```sh
    terraform plan
-   terraform apply
+   terraform apply -auto-approve
    ```
 
 4. **Access your website:**
@@ -39,12 +39,15 @@ This project demonstrates how to use terraform to create an aws s3 bucket and ho
 - `main.tf` – Terraform configuration for S3 bucket and website hosting
 - `index.html` – Main page for your static site
 - `error.html` – Error page for your static site
+- `terraform.tfvars` – Variable values for your Terraform configuration (add your region_name and bucket_name values here )
+- `variables.tf` – Input variable definitions for your Terraform configuration
+
 
 ## Clean Up
 
 To remove all resources created by this project:
 ```sh
-terraform destroy
+terraform destroy -auto-approve
 ```
 
 ## Notes
